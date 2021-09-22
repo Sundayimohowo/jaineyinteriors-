@@ -1,0 +1,2 @@
+[04-May-2021 20:31:19 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/jaineyin/public_html/includes/database.php on line 7
+[04-May-2021 20:36:12 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'jaineyin_Stephking'@'localhost' to database 'jainyin_interiors' in /home/jaineyin/public_html/includes/database.php on line 7
