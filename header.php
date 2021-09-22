@@ -1,110 +1,63 @@
+<?php 
+include '../functions.php';
 
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interior Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
 <div class="wrapper">
 	<div class="Header-wrapper">
 	<div class="header">
-		<style>
-			header{
-				height:60px;
-				width:300px;
-				overflow:hidden;
-			}
-			header img{
-				width: 57%;
-				height:120px;
-				margin-left:-10px;
-				margin-top:-30px;
-			}
-			.header-nav a{
-			    text-decoration:none;
-			    color:#000;
-			    text-transform:uppercase;
-			    font-size: 13px;
-			    font-family: 'poppins';
-	            font-weight: bold;
-			}
-			</style>
-		<header data-aos="fade-right">
-			<a href='index.php'><img src='images/logo.jpg'; /></a>
+	<div class="toggle-bar"><span></span></div>
+		<header>
+			<a href='../index.php' style='color:#fff'><h5><i class="fas fa-home"></i><span class='headertext'>Jainy Interiors<span></h5></a>
 		</header>
-		<div class="header-nav" data-aos="fade-left">
-			<ul>
-			<a href="index.php"><li>home</li></a>
-			<a href="blog.php"><li>Blog</li></a>
-			<a href="how-it-works.php"><li>How it works</li></a>
-			<a href="about.php"><li>about us</li></a>
-				<style>
-					.gallery-ul ul{
-						display:flex;
-						flex-direction:column;
-						width:150px;
-						background:#fff;
-						position:absolute;
-						top:33px;
-						padding-left:20px;
-						display:none;
-						height:auto;
-						padding:13px;
-						justify-content:space-between;
-					}
-					.gallery-ul:hover ul{
-						display:block;
-					}
-					.gallery-ul ul li{
-						padding-top:18px;
-					}
-					
-					@media (max-width:768px){
-						.gallery-ul ul{
-							padding-left:0;
-							position:relative;
-							top:0;
-						}
-						.gallery-ul ul li{
-						padding-top:0;
-					}
-					}
-				</style>
-				<a href="javascript:void(0);"><li style='border-bottom:none;' class='gallery-ul'>Gallery<ul class='gallery-ul'>
-					<!-- <php $galleries=selectAll('gallery_categories');
-					foreach ($galleries as $key => $gallery) {
-					?> -->
-					<a href='gallery.php?category=interior_decor'><li>interior Decor</li></a>
-					<a href='gallery.php?category=furnitures'><li>Furnitures</li></a>
-					<a href='gallery.php?category=3D designs'><li>3D designs</li></a>
-					<a href='gallery.php?category=gift items'><li>Gift Items</li></a>
-					<!-- <php 
+	<h5><ul><li class='firstUl'><i class="fas fa-plus"></i><a href='#' class='headertext'>New</a><ul class='headerUl'>
+        <li><a href='add-post.php'>Post</a></li>
+		<li><a href='new-user.php'>User</a></li></ul></li></ul></h5>
+		<div class='loggedin-user'>
+			<style>
+				ul{
+					list-style: none;
 				}
-					?> -->
-				</ul></li></a>
-				<li class='social-li'><ul style='display:flex;flex-direction:row;justify-content:space-between;'>
-				<li><a href="https://www.facebook.com/jaineyinteriors/"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="http://instagram.com/jainey_interiors"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="https://api.whatsapp.com/send?phone=2348136136538"><i class="fab fa-whatsapp"></i></a></li>
-			</ul></li>
-              </ul>
-		</div>
-		<div class="toggle-bar"><span></span></div>
+				.headerUl{
+					position: absolute;
+					top: 30px;
+					background-color:#fff;
+					display:none;
+					padding-right: 15px;
+				}
+				.headerUl li{
+					border-bottom:2px solid rgba(0,0,0,0.3);
+				}
+				.headerUl a{
+					font-size:13px;
+					padding-left:-10px;
+					color: #000;
+				}
+				.headerUl a:hover{
+					color: blue;
+				}
+				.firstUl:hover .headerUl{
+					display:block;
+					padding-top:10px;
+					margin-left:-40px;
+				}
+			</style>
+        <h5><ul><li class='firstUl'> <i class="fas fa-user"></i> <a href='#' class='headertext'>olaoluwa</a><ul  class='headerUl'>
+        <li><a href='adminData.php?logout=true'>Logout</a></li></ul></li></ul></h5>
+        </div>
 	</div>
 </div>
-<script>
-
-		let toggleBar = document.querySelector('.toggle-bar');
-		let navbox = document.querySelector('.header-nav');
-		let navStatus = false;
-		toggleBar.addEventListener('click', slideToggle);
-
-		function slideToggle() {
-		
-			if (navStatus == true) {
-				navbox.style.right = "-100%";
-				navStatus = false;
-			} else if (navStatus == false) {
-				navbox.style.right = "-10%";
-				navStatus=true;
-			}
-			
-		}
-		
-
-	</script>
