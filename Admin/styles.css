@@ -1,0 +1,258 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.07);
+}
+
+.active{
+    background-color: rgba(0, 0, 255, 0.3);
+}
+a{
+    text-decoration: none;
+}
+
+.toggle-bar {
+	width: 30px;
+	display: none;
+	cursor: pointer;
+}
+.toggle-bar span {
+	display: block;
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background: #fff;
+	margin: 5px 0px;
+}
+.toggle-bar::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background: #fff;
+}
+.toggle-bar::after {
+	content: "";
+	display: block;
+	border-radius: 2px;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+}
+.wrapper{
+    width: 100%;
+    height: 100%;
+}
+.dropdown-ul{
+    display: none;
+}
+.nav-list:hover{
+    position: relative;
+}
+.nav-list:hover .dropdown-ul{
+    margin-top: 0;
+    display: block;
+    transform: translate(0.6s ease-out);
+}
+
+
+.dropdown-ul li:hover a{
+    color: rgba(57, 57, 219, 0.7);
+}
+.Header-wrapper{
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Header-wrapper .header{
+    width: 95%;
+    height: 40px;
+    display: flex;
+    color: #fff;
+    /* margin: auto; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-wrapper .header i{
+    padding-right: 10px;
+}
+
+.Header-wrapper .header  h5{
+    font-size: 18px;
+    font-weight: lighter;
+    align-self: center;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sidebar-nav{
+    width: 13%;
+    height: calc(100vh - 40px);
+    position: fixed;
+    top: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.the-content{
+    width: 80%;
+    position: absolute;
+    left: 17%;
+    top: 50px;
+    margin-right: 2.5%;
+}
+.content-body{
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sidebar-nav ul{
+    list-style: none;
+    margin-left: -40px;
+}
+
+.sidebar-nav ul li ul{
+    padding-top: 10px;
+}
+
+.sidebar-nav ul li{
+    padding-bottom: 13px;
+    padding-left: 8px;
+    padding-top: 5px;
+    margin-top: 7px;
+}
+.sidebar-nav ul li a{
+    color: #fff;
+}
+.sidebar-nav i{
+    padding-right: 10px;
+}
+
+.table-content{
+    width: 100%;
+    height: auto;
+}
+.table-content .table-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.table-content .table-inputs{
+    width: 100%;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.the-content{
+    height: 100%;
+}
+.all-posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+.all-posts h4{
+    margin-left: 20px;
+margin-top:5px;
+color: rgba(0,0,0,0.7);
+}
+.all-posts h4 span{
+    color: rgba(0, 0, 0, 0.4);
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+.table-inputs .delete{
+    background-color: rgba(255, 0, 0, 0.8);
+    border-radius: 5px;
+    color: #fff;
+    padding: 5px;
+    margin-left: 5px;
+}
+.publish{
+    background-color: rgba(0, 255,0, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+    color: #fff;
+}
+.table-inputs .edit{
+    background-color: rgba(0, 0, 255, 0.8);
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    margin-left: 5px;
+}
+.addnew{
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fff;
+    margin-left: 5px;
+}
+.username-wrapper input{
+    width: 80%;
+    border: none;
+    border:2px solid rgba(0, 0, 0, 0.08);
+    height: 3em;
+    border-radius: 5px;
+}
+.add-user-wrapper{
+    margin-top: 40px;
+}
+.add-user-wrapper button{
+    background-color: rgba(0, 255, 0, 0.7);
+    padding: 8px;
+    color: #fff;
+    border-radius: 5px;
+}
+.user-role{
+    width: 80%;
+    height: 3em;
+    border: none;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width:968px){
+    .sidebar-nav{
+        z-index: 189;
+        left: -660px;
+        width: 40%;
+    }
+    .dropdown-ul{
+        padding-left: 50px;
+    }
+    .the-content{
+        width: 95%;
+        margin: auto;
+        left: 2.5%;
+    }
+    
+    textarea{
+        width: 80%;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+    }
+    .toggle-bar{
+        display: block;
+    }
+}
+
+@media (max-width:468px){
+    .headertext{
+        display: none;
+    }
+}
